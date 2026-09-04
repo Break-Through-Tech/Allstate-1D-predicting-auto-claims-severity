@@ -1,12 +1,8 @@
 # AI Studio Challenge Project Title
 
-> 💡 **Note for the team:** This is just a template. Update the above title with your AI Studio Challenge Project name. Remove all guidance notes and example text in this template and populate this README with your own content. You can work on this README throughout AI Studio, and get feedback from your AI Studio Coach and Challenge Advisor before finalizing it.  
-
 ---
 
-### 👥 **Team Members**
-
-**Example:**
+### **Team Members**
 
 
 | Name             | GitHub Handle | Contribution |
@@ -18,36 +14,25 @@
 
 ---
 
+## **- Project Highlights -**
 
 
-## 🎯 **Project Highlights**
 
-**Example:**
 
-- Developed a machine learning model using `[model type/technique]` to address `[challenge project task]`.
-- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
-- Generated actionable insights to inform business decisions at `[host company or stakeholders]`.
-- Implemented `[specific methodology]` to address industry constraints or expectations.
 
 ---
 
+## **- Setup and Installation -**
 
 
-## 👩🏽‍💻 **Setup and Installation**
 
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
 
-- How to clone the repository
-- How to install dependencies
-- How to set up the environment
-- How to access the dataset(s)
-- How to run the notebook or scripts
+
+
 
 ---
 
-
-
-## 🏗️ **Project Overview**
+## **- Project Overview -**
 
 This project is part of the **Break Through Tech AI/ML Fellowship with Cornell Tech** for the 2026–2027 cohort. The year-long fellowship consists of four main sections:
 
@@ -66,82 +51,41 @@ From a real-world perspective, more accurate early claim estimates could help in
 
 
 
-## 📊 **Data Exploration**
-
-**You might consider describing the following (as applicable):**
-
-- The dataset(s) used: origin, format, size, type of data
-- Data exploration and preprocessing approaches
-- Insights from your Exploratory Data Analysis (EDA)
-- Challenges and assumptions when working with the dataset(s)
-
-**Potential visualizations to include:**
-
-- Plots, charts, heatmaps, feature visualizations, sample dataset images
+## - **Data Exploration -**
 
 ---
 
 
 
-## 🧠 **Model Development**
-
-**You might consider describing the following (as applicable):**
-
-- Model(s) used (e.g., CNN with transfer learning, regression models)
-- Feature selection and Hyperparameter tuning strategies
-- Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
+## **- Model Development -**
 
 ---
 
 
 
-## 📈 **Results & Key Findings**
-
-**You might consider describing the following (as applicable):**
-
-- Performance metrics (e.g., Accuracy, F1 score, RMSE)
-- How your model performed
-- Insights from evaluating model fairness
-
-**Potential visualizations to include:**
-
-- Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
+## - **Results & Key Findings -**
 
 ---
 
 
 
-## 🚀 **Next Steps**
-
-**You might consider addressing the following (as applicable):**
-
-- What are some of the limitations of your model?
-- What would you do differently with more time/resources?
-- What additional datasets or techniques would you explore?
+## - **Next Steps -**
 
 ---
 
 
 
-## 📝 **License**
-
-Specify how your project can be used by others. Choose an appropriate license and link it here (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type. 
-
-**Example:**
-This project is licensed under the MIT License.
+## - **License -**
 
 ---
 
 
 
-## 📄 **References** (Optional but encouraged)
-
-Cite relevant papers, articles, or resources that supported your project.
+## **- References** -
 
 ---
 
 
 
-## 🙏 **Acknowledgements** (Optional but encouraged)
+## - **Acknowledgements** -
 
-Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
