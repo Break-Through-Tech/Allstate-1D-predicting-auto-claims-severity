@@ -8,7 +8,7 @@
 | Name             | GitHub Handle | Contribution |
 | ---------------- | ------------- | ------------ |
 | Nevaeh Dickerson | @vaeh4codes   |              |
-| Matthew Tan      |               |              |
+| Matthew Tan      | @mtan121      |              |
 | Andre Miller     |               |              |
 
 
