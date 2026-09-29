@@ -5,11 +5,11 @@
 ### **Team Members**
 
 
-| Name             | GitHub Handle | Contribution |
-| ---------------- | ------------- | ------------ |
-| Nevaeh Dickerson | @vaeh4codes   |              |
-| Matthew Tan      | @mtan121      |              |
-| Andre Miller     |               |              |
+| Name             | GitHub Handle | Contribution          |
+| ---------------- | ------------- | --------------------- |
+| Nevaeh Dickerson | @vaeh4codes   | Data Exploration      |
+| Matthew Tan      | @mtan121      |                       |
+| Andre Miller     |               |                       |
 
 
 ---
