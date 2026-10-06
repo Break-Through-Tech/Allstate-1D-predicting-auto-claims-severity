@@ -6,9 +6,7 @@ Related project task: [GitHub issue 6](https://github.com/Break-Through-Tech/All
 
 ## Overview
 
-This bundle records the source identity, schema and integrity checks, and a machine-readable profile of all 132 fields for Gate 1, Data Readiness. The tables were calculated from `data/allstate_claims_data.csv`. They were not typed in by hand.
-
-The notebook at `notebooks/SeptemberMilestone/Data_Readiness_&_Source_Verification.ipynb` and the files under `registers/` were left unchanged.
+This bundle records the source identity, schema and integrity checks, and a machine-readable profile of all 132 fields for Gate 1, Data Readiness. The tables were calculated from `data/allstate_claims_data.csv`. The notebook is at `notebooks/SeptemberMilestone/Data_Readiness_&_Source_Verification.ipynb.`
 
 ## Work done
 
@@ -21,13 +19,19 @@ The notebook at `notebooks/SeptemberMilestone/Data_Readiness_&_Source_Verificati
 - Confirmed every `cat*` value is stored as a category label.
 - Wrote an observed dtype, unique count, missing count, and range or level summary for all 132 fields.
 
+
+
 ## Files
 
-| Path | Role |
-| --- | --- |
-| `source_identity.csv` | Source path, byte size, shape, and SHA-256 |
-| `data_schema_check.csv` | Header, roles, identifier, duplicates, missingness, continuous range, and target checks |
+
+| Path                      | Role                                                                                       |
+| ------------------------- | ------------------------------------------------------------------------------------------ |
+| `source_identity.csv`     | Source path, byte size, shape, and SHA-256                                                 |
+| `data_schema_check.csv`   | Header, roles, identifier, duplicates, missingness, continuous range, and target checks    |
 | `data_field_profiles.csv` | Observed dtype, unique count, missing count, and range or level summary for all 132 fields |
-| `manifest.json` | Paths, SHA-256 hashes, source, and code revision |
-| `run_receipt.md` | Where the checks ran and whether they succeeded |
-| `independent_review.md` | Recomputed check of the source and bundle hashes |
+| `manifest.json`           | Paths, SHA-256 hashes, source, and code revision                                           |
+| `run_receipt.md`          | Where the checks ran and whether they succeeded                                            |
+| `independent_review.md`   | Recomputed check of the source and bundle hashes                                           |
+| `anomaly_register.csv`    | Gate 1 anomaly record. This reload found no blocking anomaly.                              |
+
+
