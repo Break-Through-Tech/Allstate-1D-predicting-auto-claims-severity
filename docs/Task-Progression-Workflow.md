@@ -30,7 +30,7 @@ Each project task moves through three people. Use these GitHub project statuses,
 
 1. Set the GitHub project task to **In Review**.
 2. Review the code in the notebook.
-3. Document any necessary changes in `registers/<milestonemonth>_findings_register_<gatenumber>.csv`.
+3. Document any necessary changes in the findings register inside that gate's artifact bundle.
 4. Set the GitHub project task to **Ready for Documentation**.
 
 
@@ -39,7 +39,7 @@ Each project task moves through three people. Use these GitHub project statuses,
 
 1. Review the code in the notebook.
 2. Confirm that the findings recorded in the previous step are fixed.
-3. Record findings in `registers/<milestonemonth>_findings_register_<gatenumber>.csv`.
-4.  Record anomalies in `registers/<milestonemonth>_anomaly_register_<gatenumber>.csv`.
+3. Record findings in the findings register inside that gate's artifact bundle.
+4. Record anomalies in the anomaly register inside that gate's artifact bundle.
 5. Set the GitHub project task to **Done**.
 
