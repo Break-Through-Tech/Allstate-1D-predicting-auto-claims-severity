@@ -9,7 +9,7 @@
 | ---------------- | ------------- | --------------------- |
 | Nevaeh Dickerson | @vaeh4codes   | Data Exploration      |
 | Matthew Tan      | @mtan121      |                       |
-| Andre Miller     |               |                       |
+| Andre Miller     |     @andredmiller12          |         Gate 3              |
 
 
 ---
