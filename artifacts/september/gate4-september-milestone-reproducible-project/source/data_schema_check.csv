@@ -1,0 +1,19 @@
+check,expected,actual,passed
+header_order,"id, cat1-cat116, cont1-cont14, loss","id, cat1-cat116, cont1-cont14, loss",True
+identifier_count,1,1,True
+categorical_count,116,116,True
+continuous_count,14,14,True
+target_count,1,1,True
+id_non_missing,0,0,True
+id_unique,188318,188318,True
+duplicate_rows,0,0,True
+missing_cells,0,0,True
+cont_numeric,True,True,True
+cont_in_0_1,True,True,True
+loss_numeric,True,True,True
+loss_finite,True,True,True
+loss_strictly_positive,True,True,True
+cat_labels_not_numeric,True,True,True
+file_size_bytes,70025339,70025339,True
+row_count,188318,188318,True
+column_count,132,132,True
