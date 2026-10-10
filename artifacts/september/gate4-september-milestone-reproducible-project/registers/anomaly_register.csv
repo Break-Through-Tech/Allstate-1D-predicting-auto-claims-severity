@@ -1,0 +1,2 @@
+id,description,affected_count,severity,owner,status,evidence,handling,impact
+GATE1-000,"Gate 1 reload of data/allstate_claims_data.csv found 0 blocking source, schema, or integrity anomalies.",0,none,unassigned,none_found,data_schema_check.csv,"No rows were removed or corrected. All 188318 rows stay in the source.",No blocking impact on September EDA.
