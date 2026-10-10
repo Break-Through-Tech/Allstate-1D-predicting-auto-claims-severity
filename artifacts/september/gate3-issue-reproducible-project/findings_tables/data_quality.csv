@@ -1,0 +1,13 @@
+check,value
+rows,188318
+columns,132
+categorical_fields,116
+continuous_fields,14
+identifier_columns,1
+target_columns,1
+unique_ids,188318
+duplicate_ids,0
+duplicate_rows,0
+missing_cells,0
+nonpositive_loss,0
+infinite_numeric_values,0
