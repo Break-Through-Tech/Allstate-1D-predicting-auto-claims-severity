@@ -18,6 +18,7 @@ Team approval is still pending in [`review/team_approval.md`](review/team_approv
 - Saved the notebook `loss` summary, the raw and `log1p(loss)` histograms, and the median-constant MAE of 1,809.0487864675708.
 - Saved the 14-field continuous summary and the Pearson correlation matrix, including correlations with `loss`.
 - Saved the `cat112` level shares and the count and box plots used by the 1 percent display rule. Thirty of 51 levels are below that threshold.
+- Saved box plots of `log1p(loss)` for every `cat*` field, with levels below 1 percent grouped as Other.
 - Saved the `cont2` quantile-bin table and box plot. The requested 10 bins became 9 because of repeated values.
 
 ## Files
@@ -38,6 +39,7 @@ Team approval is still pending in [`review/team_approval.md`](review/team_approv
 | [`tables/cont2_quantile_bins.csv`](tables/cont2_quantile_bins.csv) | Nine `cont2` bins with support, mean `loss`, median `loss`, and interquartile range |
 | [`visualizations/loss_distribution.jpg`](visualizations/loss_distribution.jpg) | Notebook histograms of raw `loss` and `log1p(loss)` |
 | [`visualizations/cat112_distribution.jpg`](visualizations/cat112_distribution.jpg) | Count plot and `log1p(loss)` box plot for `cat112`, with rare levels grouped as Other |
+| [`visualizations/categorical_log1p_loss_boxplots.jpg`](visualizations/categorical_log1p_loss_boxplots.jpg) | Box plots of `log1p(loss)` for every `cat*` field, with levels below 1% grouped as Other |
 | [`visualizations/cont2_quantile_bins.jpg`](visualizations/cont2_quantile_bins.jpg) | Box plot of `log1p(loss)` across the nine `cont2` quantile bins |
 | [`review/team_approval.md`](review/team_approval.md) | Pending approval of this method freeze |
 | `gate_2_readme.md` | Earlier folder note. The files above are the September method record. |
