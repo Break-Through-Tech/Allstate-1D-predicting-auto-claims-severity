@@ -8,7 +8,7 @@
 | Name             | GitHub Handle | Contribution          |
 | ---------------- | ------------- | --------------------- |
 | Nevaeh Dickerson | @vaeh4codes   | Data Exploration      |
-| Matthew Tan      | @mtan121      |                       |
+| Matthew Tan      | @mtan121      |      Gate 2                 |
 | Andre Miller     |     @andredmiller12          |         Gate 3              |
 
 
