@@ -1,0 +1,6 @@
+check,expected,observed,passed
+unique_ids_equal_source_rows,188318,188318,True
+manifest_rows_equal_source_rows,188318,188318,True
+train_validation_id_overlap,0,0,True
+train_test_id_overlap,0,0,True
+validation_test_id_overlap,0,0,True
