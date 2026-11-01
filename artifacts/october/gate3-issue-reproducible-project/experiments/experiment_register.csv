@@ -1,0 +1,31 @@
+run_id,hypothesis,changed_variable,feature_set,preprocessing,settings,seed,versions,runtime_seconds,train_or_cv_mae,validation_mae,validation_claims,result,interpretation,next_decision
+constant-mean,Required constant comparator,none,none,none,constant=3033.6880441807893,1,"Python: 3.12.4
+pandas: 3.0.6
+NumPy: 2.5.3
+scikit-learn: 1.9.1
+XGBoost: 3.4.1
+",0.0,,1978.3970470120253,28248,scored,Training mean predicted for every validation claim.,Keep as the required baseline.
+constant-median,Constant that minimizes absolute error,none,none,none,constant=2113.755,1,"Python: 3.12.4
+pandas: 3.0.6
+NumPy: 2.5.3
+scikit-learn: 1.9.1
+XGBoost: 3.4.1
+",0.0,,1827.3136338855847,28248,scored,Training median predicted for every validation claim.,Keep as the companion baseline.
+forest-1,A tree ensemble can represent non-linear relationships among the anonymous fields,none,All 130 model inputs in field_roles.csv. id and loss stay out.,Training-only median fill for numeric fields;Training-only mode fill and one-hot encoding with handle_unknown=ignore;,"{'n_estimators': 100, 'max_depth': 12, 'min_samples_leaf': 20, 'random_state': 1}",1,"Python: 3.12.4
+pandas: 3.0.6
+NumPy: 2.5.3
+scikit-learn: 1.9.1
+XGBoost: 3.4.1
+",,1282.8323805287268,1291.591206622153,28248,scored,First forest settings. 5-fold MAE is the training score.,"Sprint 3 tests one change: raise forest n_estimators from 100 to 200. The forest 5-fold MAE is 1282.83, about 120 dollars above the XGBoost 5-fold MAE of 1162.96."
+xgboost-1,Gradient boosting aimed at absolute error can lower MAE relative to a constant,none,All 130 model inputs in field_roles.csv. id and loss stay out.,Training-only median fill for numeric fields;Training-only mode fill and one-hot encoding with handle_unknown=ignore;,"{'objective': 'reg:absoluteerror', 'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1, 'random_state': 1}",1,"Python: 3.12.4
+pandas: 3.0.6
+NumPy: 2.5.3
+scikit-learn: 1.9.1
+XGBoost: 3.4.1
+",,1162.9594067528374,1171.71898178563,28248,scored,First XGBoost settings. 5-fold MAE is the training score.,No setting change. Sprint 3 changes only the forest tree count.
+iteration-1,A smaller max_depth is warranted only when the in-sample training MAE is far below the 5-fold MAE,none,All 130 model inputs in field_roles.csv. id and loss stay out.,Training-only median fill for numeric fields;Training-only mode fill and one-hot encoding with handle_unknown=ignore;,no refit,1,"Python: 3.12.4
+pandas: 3.0.6
+NumPy: 2.5.3
+scikit-learn: 1.9.1
+XGBoost: 3.4.1
+",0.0,,,28248,not run,Forest in-sample MAE is 1223.9801792707158. Forest 5-fold MAE is 1282.8323805287268. Forest relation is close. XGBoost in-sample MAE is 1103.0595840165088. XGBoost 5-fold MAE is 1162.9594067528374. XGBoost relation is close. Previous forest validation MAE is 1291.5912066221533. Previous XGBoost validation MAE is 1171.71898178563. There is no new validation MAE.,Stop. The training-fold evidence did not call for one setting change. This sprint does not start another fit.
