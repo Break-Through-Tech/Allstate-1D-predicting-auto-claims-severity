@@ -161,6 +161,7 @@ Modeling Objective & Evaluation
 
 The primary objective of this phase is to develop a machine learning model capable of predicting the final claim cost (loss) based on the 130 anonymized input features available at the time of the claim.
 Because the business goal is to minimize the average dollar amount by which our predictions miss the actual claim costs, we evaluate all models using Mean Absolute Error (MAE) in the original dollar units.
+
 Data Partitioning & Leakage Prevention
 
 To test our models and prevent data leakage, we implemented a strict data splitting strategy using a reproducible seed (random_state=1). The dataset of 188,318 claims was divided into three partitions:
