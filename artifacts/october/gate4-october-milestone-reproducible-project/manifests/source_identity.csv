@@ -1,0 +1,2 @@
+path,file_size_bytes,expected_file_size_bytes,row_count,expected_row_count,column_count,expected_column_count,sha256
+data/allstate_claims_data.csv,70025339,70025339,188318,188318,132,132,74037cb248a1064e4d578692a4f4e5d8492ed1b2033daf643496e1b68b14ae03
