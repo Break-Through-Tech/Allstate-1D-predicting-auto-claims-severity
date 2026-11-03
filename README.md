@@ -157,13 +157,66 @@ These visualizations are used to document important patterns and guide feature a
 ## **- Model Development -**
 
 ---
+Modeling Objective & Evaluation
 
+The primary objective of this phase is to develop a machine learning model capable of predicting the final claim cost (loss) based on the 130 anonymized input features available at the time of the claim.
+Because the business goal is to minimize the average dollar amount by which our predictions miss the actual claim costs, we evaluate all models using Mean Absolute Error (MAE) in the original dollar units.
+Data Partitioning & Leakage Prevention
 
+To test our models and prevent data leakage, we implemented a strict data splitting strategy using a reproducible seed (random_state=1). The dataset of 188,318 claims was divided into three partitions:
+
+Training Set (70%): 131,822 claims used strictly for training the models and fitting preprocessing rules.
+
+Validation Set (15%): 28,248 claims used to compare models, tune hyperparameters, and measure generalization.
+
+Test Set (15%): 28,248 claims strictly held out for the final project evaluation in November.
+
+To ensure consistency across all future experiments, we also generated a machine-readable partition manifest (gate1_partition_manifest.csv) that locks every claim ID to its respective partition.
+
+Data Preprocessing Pipeline
+
+We built an automated preprocessing pipeline using Scikit-Learn to prepare the 130 anonymized features for machine learning algorithms. All preprocessing rules were calculated only on the training data before being applied to the validation data to prevent information leakage.
+
+Continuous Features (14): Missing values were imputed using the training median. Features were intentionally left unscaled because tree-based models do not require feature scaling.
+
+Categorical Features (116): Missing values were imputed using the training mode (most frequent level). The categories were then transformed into numeric inputs using One-Hot Encoding. The encoder was configured to safely ignore any previously unseen or rare categories that might appear in the validation or test sets.
+
+Baselines & Model Selection
+
+Before training complex models, we established two constant baseline strategies to prove the mathematical value of the machine learning approach:
+
+Mean Baseline: Predicting the average training claim cost for every validation claim yields an MAE of $1,978.40.
+
+Median Baseline: Predicting the median training claim cost yields a stronger baseline MAE of $1,827.31. All models must beat this score.
+
+We selected two distinct tree-based architectures for our initial modeling phase:
+
+Random Forest Regressor: Selected for its ability to naturally capture non-linear relationships among the anonymized fields while resisting overfitting.
+
+XGBoost Regressor: Selected for its powerful gradient boosting architecture, specifically configured to optimize directly for absolute error (reg:absoluteerror).
+
+Training & Complexity Checks
+
+Rather than relying on a single training run, we evaluated our model settings using 5-Fold Cross-Validation inside the training set.
+To ensure our models were learning real patterns rather than simply memorizing the training data (overfitting), we implemented an automated complexity check. By comparing the models' in-sample training MAE to their 5-fold cross-validation MAE, we verified that both models generalized well. Neither model showed a gap larger than 10%, meaning their depth and complexity settings were fundamentally healthy and did not require artificial restriction.
 
 ## - **Results & Key Findings -**
 
 ---
+Both machine learning models successfully learned from the anonymized features and outperformed the baselines (mean and median) on the 28,248 unseen validation claims:
 
+Random Forest: Achieved a validation MAE of $1,291.59 (saving ~$535 per claim compared to the median baseline).
+
+XGBoost: Emerged as the strongest overall model, achieving a validation MAE of $1,171.72 (saving ~$655 per claim compared to the median baseline).
+
+High-Loss Tail Analysis (Extreme Outliers)
+
+A small percentage of the claims are high-cost outliers. To understand how our models handle these extremes, we split the validation data using the 99th percentile of training loss ($14,017.41).
+This revealed a critical trade-off:
+
+On the 99% of normal claims (27,963 claims): XGBoost is highly superior, missing by only $1,089 on average compared to the Forest's $1,214.
+
+On the 1% extreme tail (285 claims): The Random Forest is actually safer, missing by $8,868 on average compared to XGBoost's $9,265.
 
 
 ## - **Next Steps -**
