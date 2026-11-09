@@ -1,0 +1,3 @@
+baseline,partition,claim_count,mae,code
+training_mean,validation,28248,1978.3970470120255,sklearn.metrics.mean_absolute_error
+training_median,validation,28248,1827.3136338855847,sklearn.metrics.mean_absolute_error
