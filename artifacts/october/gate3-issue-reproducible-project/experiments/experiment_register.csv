@@ -16,13 +16,13 @@ pandas: 3.0.6
 NumPy: 2.5.3
 scikit-learn: 1.9.1
 XGBoost: 3.4.1
-",,1282.8323805287268,1291.591206622153,28248,scored,First forest settings. 5-fold MAE is the training score.,"Sprint 3 tests one change: raise forest n_estimators from 100 to 200. The forest 5-fold MAE is 1282.83, about 120 dollars above the XGBoost 5-fold MAE of 1162.96."
+",2113.16069325,1282.8323805287268,1291.591206622153,28248,scored,First forest settings. 5-fold MAE is the training score.,"Sprint 3 tests one change: raise forest n_estimators from 100 to 200. The forest 5-fold MAE is 1282.83, about 120 dollars above the XGBoost 5-fold MAE of 1162.96."
 xgboost-1,Gradient boosting aimed at absolute error can lower MAE relative to a constant,none,All 130 model inputs in field_roles.csv. id and loss stay out.,Training-only median fill for numeric fields;Training-only mode fill and one-hot encoding with handle_unknown=ignore;,"{'objective': 'reg:absoluteerror', 'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1, 'random_state': 1}",1,"Python: 3.12.4
 pandas: 3.0.6
 NumPy: 2.5.3
 scikit-learn: 1.9.1
 XGBoost: 3.4.1
-",,1162.9594067528374,1171.71898178563,28248,scored,First XGBoost settings. 5-fold MAE is the training score.,No setting change. Sprint 3 changes only the forest tree count.
+",96.60703108400048,1162.9594067528374,1171.71898178563,28248,scored,First XGBoost settings. 5-fold MAE is the training score.,No setting change. Sprint 3 changes only the forest tree count.
 iteration-1,A smaller max_depth is warranted only when the in-sample training MAE is far below the 5-fold MAE,none,All 130 model inputs in field_roles.csv. id and loss stay out.,Training-only median fill for numeric fields;Training-only mode fill and one-hot encoding with handle_unknown=ignore;,no refit,1,"Python: 3.12.4
 pandas: 3.0.6
 NumPy: 2.5.3

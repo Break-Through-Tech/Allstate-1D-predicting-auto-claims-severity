@@ -1,6 +1,5 @@
 approach,partition_labels,train_or_cv_mae_dollars,validation_mae_dollars,validation_claims,gap_vs_mean_baseline_dollars,gap_vs_median_baseline_dollars,complexity,runtime_seconds
 constant-mean,"train=131822, 5-fold inside training only; validation=28248; test held out; random_state=1",,1978.3970470120253,28248,0.0,151.08341312644052,constant=3033.6880441807893,0.0
 constant-median,"train=131822, 5-fold inside training only; validation=28248; test held out; random_state=1",,1827.3136338855847,28248,-151.08341312644052,0.0,constant=2113.755,0.0
-forest-1,"train=131822, 5-fold inside training only; validation=28248; test held out; random_state=1",1282.8323805287268,1291.591206622153,28248,-686.8058403898722,-535.7224272634317,"{'n_estimators': 100, 'max_depth': 12, 'min_samples_leaf': 20, 'random_state': 1}",
-xgboost-1,"train=131822, 5-fold inside training only; validation=28248; test held out; random_state=1",1162.9594067528374,1171.71898178563,28248,-806.6780652263953,-655.5946520999547,"{'objective': 'reg:absoluteerror', 'n_estimators': 200, 'max_depth': 6, 'learning_rate': 0.1, 'random_state': 1}",
+forest-1,"train=131822, 5-fold inside training only; validation=28248; test held out; random_state=1",1282.8323805287268,1291.591206622153,28248,-686.8058403898722,-535.7224272634317,"{'n_estimators': 100, 'max_depth': 12, 'min_samples_leaf': 20, 'random_state': 1}",2113.16069325
 iteration-1,"train=131822, 5-fold inside training only; validation=28248; test held out; random_state=1",,,28248,,,no refit,0.0
