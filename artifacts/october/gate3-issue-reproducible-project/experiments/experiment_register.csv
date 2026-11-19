@@ -29,3 +29,9 @@ NumPy: 2.5.3
 scikit-learn: 1.9.1
 XGBoost: 3.4.1
 ",0.0,,,28248,not run,Forest in-sample MAE is 1223.9801792707158. Forest 5-fold MAE is 1282.8323805287268. Forest relation is close. XGBoost in-sample MAE is 1103.0595840165088. XGBoost 5-fold MAE is 1162.9594067528374. XGBoost relation is close. Previous forest validation MAE is 1291.5912066221533. Previous XGBoost validation MAE is 1171.71898178563. There is no new validation MAE.,Stop. The training-fold evidence did not call for one setting change. This sprint does not start another fit.
+xgboost-grid,An exhaustive training-fold search can choose the XGBoost settings,"n_estimators, max_depth, learning_rate",All 130 model inputs in field_roles.csv. id and loss stay out.,Training-only median fill for numeric fields;Training-only mode fill and one-hot encoding with handle_unknown=ignore;,"{'objective': 'reg:absoluteerror', 'n_estimators_cap': 200, 'max_depth': 6, 'learning_rate': 0.1, 'random_state': 1, 'early_stopping_rounds': 20, 'trees_kept': 200}",1,"Python: 3.12.4
+pandas: 3.0.6
+NumPy: 2.5.3
+scikit-learn: 1.9.1
+XGBoost: 3.4.1
+",,1164.196245074631,1170.4913925603469,28248,scored,The 5 training folds chose the settings. Early stopping used a 10 percent slice of the fit rows. The validation MAE is one score.,Keep xgboost-1. This row is the search result beside it.
