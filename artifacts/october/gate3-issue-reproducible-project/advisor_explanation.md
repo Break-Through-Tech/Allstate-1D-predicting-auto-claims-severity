@@ -24,6 +24,8 @@
 - This note does not choose a model.
 - The iteration did not change a setting, so it is not a third model.
 
+The XGBoost search tried eight combinations: 100 or 200 trees, depth 4 or 6, and a learning rate of 0.05 or 0.1. Each fit held out 10 percent of its rows and stopped after 20 rounds with no better stop-slice MAE. The folds chose a cap of 200, depth 6, and a learning rate of 0.1, and the stop kept 200 trees. The validation MAE is $1,170.49. The forest search tried four combinations: 100 or 200 trees and depth 8 or 12, with at least 20 training claims in each final group. Trees were added in batches of 10 and stopped after 20 added trees with no better stop-slice MAE. The folds chose a cap of 200 and depth 12, and the stop kept 140 trees. The validation MAE is $1,291.53. Both scores use the same 28,248 validation claims. The test claims were not read.
+
 ## What a field score cannot mean
 
 - `cat1` through `cat116` and `cont1` through `cont14` stay anonymous predictors. The project overview's examples are examples of field types. They are not a dictionary for these columns.
