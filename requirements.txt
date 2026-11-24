@@ -1,1 +1,12 @@
+# Pinned to the versions recorded with the October comparison (Python 3.12.4).
+# Source: artifacts/october/gate4-october-milestone-reproducible-project/handoff/november_handoff.md
+numpy==2.5.3
+pandas==3.0.6
+scikit-learn==1.9.1
+xgboost==3.4.1
 
+# September Gate 3 figures (matplotlib, seaborn) and October Gate 2 sparse matrices (scipy).
+# Those notebooks import these packages; the milestone packages did not record their versions.
+matplotlib
+seaborn
+scipy
